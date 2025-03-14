@@ -1,6 +1,10 @@
 package MarioBross;
 
+import MarioBross.EnemigoGoomba.Goompa;
 import MarioBross.Enums.Nombres;
+import Troopa.Koopa;
+import Troopa.Paratroopa;
+import Troopa.Pichon;
 
 public class Main {
     public static void main(String[] args){
@@ -17,9 +21,12 @@ public class Main {
         Partida.insertarEnemigo(g2);
         Partida.insertarEnemigo(pch1);
 
-
+        p1.recibeAtaque(2);
         Partida.listaResumen();
-        Partida.listaCompleta();
+        Partida.eliminar(p1);
+        System.out.println("despyes de eliminar del array");
+        Partida.listaResumen();
+
        
 
 

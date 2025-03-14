@@ -1,4 +1,4 @@
-package MarioBross;
+package MarioBross.EnemigoGoomba;
 
 import MarioBross.Enums.Estado;
 import MarioBross.Enums.Nombres;

@@ -1,5 +1,6 @@
-package MarioBross;
+package Troopa;
 
+import MarioBross.EnemigoGoomba.Enemigo;
 import MarioBross.Enums.Estado;
 import MarioBross.Enums.Nombres;
 

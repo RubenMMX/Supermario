@@ -1,4 +1,4 @@
-package MarioBross;
+package MarioBross.EnemigoGoomba;
 
 public class Jugador {
     private int vida;

@@ -1,4 +1,4 @@
-package MarioBross;
+package Troopa;
 
 import MarioBross.Enums.Movimiento;
 import MarioBross.Enums.Nombres;
