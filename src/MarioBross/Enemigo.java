@@ -3,11 +3,11 @@ package MarioBross;
 public abstract class Enemigo {
     private String nombre;
     private int velocidad;
-    private Estado estado;
+    private  Estado estado;
     private Movimiento ejeMovimiento;
 
-    public Enemigo(int velocidad, String nombre, Estado estado, String ejeMovimiento) {
-        this.velocidad = velocidad;
+    public Enemigo( String nombre) {
+        this.velocidad = 2;
         this.nombre = nombre;
         this.estado = Estado.desactivado;
         this.ejeMovimiento = Movimiento.horizontal;
@@ -45,11 +45,12 @@ public abstract class Enemigo {
         this.ejeMovimiento = ejeMovimiento;
     }
 
-    public abstract void recibeAtaque();
+    public abstract void recibeAtaque(int daño);
 
     public abstract void aparecer();
 
     public final void desaparecer(){
         this.estado = Estado.eliminado;
     }
+    public abstract void mostrar();
 }
