@@ -1,10 +1,12 @@
 package MarioBross;
 
-public class Koopa extends Troopa {
-    private String apariencia = "KOOPA";
+import MarioBross.Enums.Nombres;
 
-    public Koopa( String nombre) {
-        super( nombre);
+public class Koopa extends Troopa {
+    private String apariencia = "KOOPA.jpg";
+
+    public Koopa( Nombres nombre) {
+        super( Nombres.Koopa);
 
     }
     @Override
@@ -15,12 +17,13 @@ public class Koopa extends Troopa {
     @Override
     public void aparecer() {
         super.aparecer();
+        System.out.println("EL enemigo "+this.getNombre()+" se muestra: " + apariencia+".");
 
     }
     @Override
     public String toString() {
-        return "Koopa{" +
-                "Apariencia='" + this.apariencia+ '\'' +
+        return "{" +
+                "Nombre='" + getNombre()+ '\'' +
                 ", Estado='" + getEstado() + '\'' +
                 ", Vida='" + getVida()+ '\'' +
                 '}';

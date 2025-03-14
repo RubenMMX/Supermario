@@ -1,4 +1,4 @@
-package MarioBross;
+package MarioBross.Enums;
 
 public enum Estado {
 

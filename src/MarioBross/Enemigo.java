@@ -1,23 +1,27 @@
 package MarioBross;
 
+import MarioBross.Enums.Estado;
+import MarioBross.Enums.Movimiento;
+import MarioBross.Enums.Nombres;
+
 public abstract class Enemigo {
-    private String nombre;
+    private Nombres nombre;
     private int velocidad;
-    private  Estado estado;
+    private Estado estado;
     private Movimiento ejeMovimiento;
 
-    public Enemigo( String nombre) {
+    public Enemigo( Nombres nombre) {
         this.velocidad = 2;
         this.nombre = nombre;
         this.estado = Estado.desactivado;
         this.ejeMovimiento = Movimiento.horizontal;
     }
 
-    public String getNombre() {
+    public Nombres getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public void setNombre(Nombres nombre) {
         this.nombre = nombre;
     }
 
@@ -53,4 +57,6 @@ public abstract class Enemigo {
         this.estado = Estado.eliminado;
     }
     public abstract void mostrar();
+    @Override
+    public abstract String toString();
 }

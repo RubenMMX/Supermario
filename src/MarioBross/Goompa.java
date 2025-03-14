@@ -1,50 +1,53 @@
 package MarioBross;
 
-public final class Goompa extends Enemigo {
-    private int vida=1;
-    private String apariencia="GOOMPA";
+import MarioBross.Enums.Estado;
+import MarioBross.Enums.Nombres;
 
-    public Goompa(String nombre) {
-        super( nombre);
+public final class Goompa extends Enemigo {
+    private int vida = 1;
+    private String apariencia = "GOOMPA";
+
+    public Goompa(Nombres nombre) {
+        super(Nombres.Goompa);
 
     }
 
-    public void recibeAtaque(int daño){
+    public void recibeAtaque(int daño) {
         this.vida = this.vida - daño;
         if (vida <= 0) {
-            setEstado(Estado.eliminado);
+            this.desaparecer();
         }
     }
 
-    public  void aparecer(){
+    public void aparecer() {
         this.setEstado(Estado.visible);
+        System.out.println("EL enemigo "+this.getNombre()+" se muestra: " + apariencia+".");
     }
 
     @Override
     public void mostrar() {
 
 
-
-        System.out.println("Nombre: "+getNombre());
-        System.out.println("Velocidad: "+getVelocidad());
-        System.out.println("Estado: "+getEstado());
-        System.out.println("Movimiento: "+getEjeMovimiento());
-        System.out.println("vida: "+this.vida);
-        System.out.println("Apariencia: "+this.apariencia);
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Velocidad: " + getVelocidad());
+        System.out.println("Estado: " + getEstado());
+        System.out.println("Movimiento: " + getEjeMovimiento());
+        System.out.println("vida: " + this.vida);
+        System.out.println("Apariencia: " + this.apariencia);
     }
+
     @Override
     public String toString() {
-        return "Goompa{" +
-                "Apariencia='" + this.apariencia+ '\'' +
+        return "{" +
+                "Nombre='" + getNombre() + '\'' +
                 ", Estado='" + getEstado() + '\'' +
-                ", Vida='" + this.vida+ '\'' +
+                ", Vida='" + this.vida + '\'' +
                 '}';
     }
 
-    public void parar(){
+    public void parar() {
         this.setVelocidad(0);
     }
-
 
 
 }

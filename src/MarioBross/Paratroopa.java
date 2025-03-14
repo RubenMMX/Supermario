@@ -1,14 +1,15 @@
 package MarioBross;
 
-import java.sql.SQLOutput;
+import MarioBross.Enums.Movimiento;
+import MarioBross.Enums.Nombres;
 
 public class Paratroopa extends Troopa {
     private String apariencia = "PARATROOPA";
     private String tipo = "VOLADOR";
 
-    public Paratroopa(String nombre) {
-        super(nombre);
-        this.setEjeMovimiento(Movimiento.vertical);
+    public Paratroopa(Nombres nombre) {
+        super(Nombres.Paratroopa);
+        volar();
     }
 
     @Override
@@ -18,16 +19,20 @@ public class Paratroopa extends Troopa {
             this.setEjeMovimiento(Movimiento.horizontal);
         }
     }
+    public void volar(){
+        this.setEjeMovimiento(Movimiento.vertical);
+    }
 
     @Override
     public void aparecer() {
         super.aparecer();
+        System.out.println("EL enemigo "+this.getNombre()+" se muestra: " + apariencia+".");
     }
 
     @Override
     public String toString() {
-        return "Paratroopa{" +
-                "Apariencia='" + this.apariencia + '\'' +
+        return "{" +
+                "Nombre='" + getNombre()+ '\'' +
                 ", Estado='" + getEstado() + '\'' +
                 ", Vida='" + getVida() + '\'' +
                 '}';

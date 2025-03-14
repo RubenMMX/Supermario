@@ -1,9 +1,12 @@
 package MarioBross;
 
+import MarioBross.Enums.Estado;
+import MarioBross.Enums.Nombres;
+
 public class Troopa extends Enemigo {
     private int vida ;
 
-    public Troopa( String nombre) {
+    public Troopa( Nombres nombre) {
         super( nombre);
         this.vida = 2;
 
@@ -19,9 +22,9 @@ public class Troopa extends Enemigo {
 
     @Override
     public void recibeAtaque(int daño) {
-        this.vida = this.vida - daño;
+        this.vida  -= daño;
         if (vida <= 0) {
-            setEstado(Estado.eliminado);
+            this.desaparecer();
         }
     }
 
@@ -37,6 +40,15 @@ public class Troopa extends Enemigo {
         System.out.println("Movimiento: "+getEjeMovimiento());
         System.out.println("Vida: "+this.vida);
 
+    }
+
+    @Override
+    public String toString() {
+         return "Troopa{" +
+                "Apariencia='" + getNombre()+ '\'' +
+                ", Estado='" + getEstado() + '\'' +
+                ", Vida='" + getVida()+ '\'' +
+                '}';
     }
 
 }

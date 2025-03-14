@@ -2,13 +2,17 @@ package MarioBross;
 
 public class Jugador {
     private int vida;
-    private int nombre;
 
-    public Jugador(int vida) {
+
+    public Jugador(int vida, int nombre) {
         this.vida = vida;
+
     }
 
+
+
     public void recibeAtaque(){
-        vida--;
+        this.vida --;
+
     }
 }

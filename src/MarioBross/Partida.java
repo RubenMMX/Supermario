@@ -26,7 +26,7 @@ public class Partida {
     public static void listaResumen() {
         for (int i = 0; i < arrayEnemigos.length; i++) {
             if (arrayEnemigos[i] != null) {
-                String string = arrayEnemigos[i].toString();
+                System.out.println(arrayEnemigos[i].toString());
             }
         }
     }

@@ -1,10 +1,12 @@
 package MarioBross;
 
+import MarioBross.Enums.Nombres;
+
 public class Pichon extends Troopa {
     private String apariencia = "PICHON";
 
-    public Pichon(String nombre) {
-        super(nombre);
+    public Pichon(Nombres nombre) {
+        super(Nombres.Pichon);
     }
 
     public void recibeAtaque(int daño) {
@@ -14,12 +16,13 @@ public class Pichon extends Troopa {
 
     public void aparecer() {
         super.aparecer();
+        System.out.println("EL enemigo "+this.getNombre()+" se muestra: " + apariencia+".");
 
     }
     @Override
     public String toString() {
-        return "Pichon{" +
-                "Apariencia='" + this.apariencia+ '\'' +
+        return "{" +
+                "Nombre='" + getNombre()+ '\'' +
                 ", Estado='" + getEstado() + '\'' +
                 ", Vida='" + getVida()+ '\'' +
                 '}';
